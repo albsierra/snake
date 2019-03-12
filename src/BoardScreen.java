@@ -141,7 +141,7 @@ public class BoardScreen extends JPanel{
 			public void actionPerformed(ActionEvent e){
 				Random die = new Random();
 				int a = die.nextInt(6) + 1;
-				dieResults.setText("You rolled a " + a);
+				dieResults.setText("Has sacado un " + a);
 				player += a;
 				//bd.setPlayer(player);
 				bd.setPlayer(a, currPlayer);
@@ -153,7 +153,7 @@ public class BoardScreen extends JPanel{
 				
 				for(Player p: players){
 					if(p.returnPosition() >= x*y-1){
-						success.setText("And the winner is: " + p.returnName() + "\nYour score: " + p.returnPlayerScore());
+						success.setText("Y el ganador es: " + p.returnName() + "\nTu puntuación: " + p.returnPlayerScore());
 					    roll.setVisible(false);
 					}
 				}
