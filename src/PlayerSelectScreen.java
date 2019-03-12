@@ -45,19 +45,19 @@ public class PlayerSelectScreen extends JPanel {
 		
 		setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 		
-		JLabel mess = new JLabel("Select Players: ");
+		JLabel mess = new JLabel("Seleccionar Jugadores: ");
 		add(mess);
 		
-		JLabel uc = new JLabel("Default: 1Player");
+		JLabel uc = new JLabel("Predeterminado: 1 Jugador");
 		add(uc);
 		
 		//set up radio buttons
 		
-		opt1 = new JRadioButton("1 Player(Default)");
+		opt1 = new JRadioButton("1 Jugador(Predeterminado)");
 		opt1.setSelected(true);
 		
-		opt2 = new JRadioButton("2 Players");
-		opt3 = new JRadioButton("3 Players");
+		opt2 = new JRadioButton("2 Jugador");
+		opt3 = new JRadioButton("3 Jugador");
 		
 		ButtonGroup grp = new ButtonGroup();
 		grp.add(opt1);
@@ -85,8 +85,8 @@ public class PlayerSelectScreen extends JPanel {
 			}
 		});
 		
-		go = new JButton("Customize Board");
-		quit = new JButton("Back");	
+		go = new JButton("Personalizar Tablero");
+		quit = new JButton("Atras");	
 		
 		go.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent event){
