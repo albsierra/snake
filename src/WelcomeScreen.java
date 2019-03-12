@@ -39,7 +39,7 @@ public class WelcomeScreen extends JPanel{
 		
 		//add formatting here
 		
-		go = new JButton("New Game");
+		go = new JButton("Nuevo Juego");
 		quit = new JButton("Quit");	
 		
 		go.addActionListener(new ActionListener(){
