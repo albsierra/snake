@@ -16,7 +16,7 @@ public class BoardScreen extends JPanel{
 	/**
 	 * 
 	 */
-	int player = 0;
+	int jugador = 0;
 	BoardDrawing bd; 
 	JPanel stats;
 	JLabel dieResults;
@@ -28,7 +28,7 @@ public class BoardScreen extends JPanel{
 	ArrayList<Player> players;
 	int x;
 	int y;
-	JLabel success;
+	JLabel suceso;
 	JButton roll;
 	
 	MainWindow mw;
@@ -130,7 +130,7 @@ public class BoardScreen extends JPanel{
 		
 		extraInfo = new JLabel();
 		
-		success = new JLabel("");
+		suceso = new JLabel("");
 		
 		//modify action listener to move between the n players 
 		//outside needs to know some amount of player data which may be got be asking and passing to inside
@@ -142,8 +142,8 @@ public class BoardScreen extends JPanel{
 				Random die = new Random();
 				int a = die.nextInt(6) + 1;
 				dieResults.setText("You rolled a " + a);
-				player += a;
-				//bd.setPlayer(player);
+				jugador += a;
+				//bd.setPlayer(jugador);
 				bd.setPlayer(a, currPlayer);
 				//bd.ensurePlayerPosition();
 				extraInfo.setText(bd.ensurePlayerPosition(currPlayer));
@@ -153,7 +153,7 @@ public class BoardScreen extends JPanel{
 				
 				for(Player p: players){
 					if(p.returnPosition() >= x*y-1){
-						success.setText("And the winner is: " + p.returnName() + "\nYour score: " + p.returnPlayerScore());
+						suceso.setText("And the winner is: " + p.returnName() + "\nYour score: " + p.returnPlayerScore());
 					    roll.setVisible(false);
 					}
 				}
@@ -179,7 +179,7 @@ public class BoardScreen extends JPanel{
 		stats.add(dieResults);
 		
 		stats.add(extraInfo);
-		stats.add(success);
+		stats.add(suceso);
 		
 		
 		
