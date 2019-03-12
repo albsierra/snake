@@ -11,7 +11,7 @@ public class Main {
 			public void run(){
 				MainWindow mw = new MainWindow();
 			    mw.setSize(600,400);
-			    mw.setTitle("Snake and Ladder");
+			    mw.setTitle("Serpiente y Escaleras");
 			    mw.setVisible(true);
 			}
 		});
