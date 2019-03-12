@@ -16,26 +16,26 @@ public class CustomizeBoardScreen extends JPanel {
 	
 
 	public void quitButtonActionListener(){
-		mw.showCard("Two");
+		mw.showCard("Dos");
 	}
 	
 	public void goButtonActionListener(){
-		mw.showCard("Four");
+		mw.showCard("Cuatro");
 	}
   
 	public CustomizeBoardScreen(MainWindow mw){
 	    this.mw = mw;
 	    
 
-		JLabel mess = new JLabel("Customize Board [Under Construction] ");
+		JLabel mess = new JLabel("Personalizar tablero [En construcción] ");
 		add(mess);
 		
-		JLabel uc = new JLabel("Default: 8x8 board with 8 randomly generated snakes/ladders");
+		JLabel uc = new JLabel("Por defecto: Tablero de 8x8 con 8 serpientes/escaleras generadas aleatóriamente");
 		add(uc);
 	    
 	    setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
-	    go = new JButton("Start Game");
-		quit = new JButton("Back");	
+	    go = new JButton("Iniciar Juego");
+		quit = new JButton("Atrás");	
 		
 		go.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent event){

@@ -8,7 +8,7 @@ public class Player {
 	private Color playerColor;
 	
 	public Player(int no){
-	    name = "Player " + no;
+	    name = "Jugador " + no;
 	    playerPosn = 0;
 	}
 	

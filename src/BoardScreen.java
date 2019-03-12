@@ -37,12 +37,12 @@ public class BoardScreen extends JPanel{
 	JButton quit;
 
 	public void quitButtonActionListener(){
-		if(JOptionPane.showConfirmDialog(this, "Are you sure?") == JOptionPane.OK_OPTION)
+		if(JOptionPane.showConfirmDialog(this, "¿Estás seguro?") == JOptionPane.OK_OPTION)
 	        System.exit(0);
 	}
 	
 	public void goButtonActionListener(){
-		mw.showCard("Two");
+		mw.showCard("Dos");
 		//mw.setBoard();
 		mw.resetAll();
 	}
@@ -73,8 +73,8 @@ public class BoardScreen extends JPanel{
 		
 		currPlayer = 0;
 		
-		go = new JButton("New Game");
-		quit = new JButton("Quit");	
+		go = new JButton("Nuevo Juego");
+		quit = new JButton("Salir");	
 		
 		go.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent event){
@@ -141,7 +141,7 @@ public class BoardScreen extends JPanel{
 			public void actionPerformed(ActionEvent e){
 				Random die = new Random();
 				int a = die.nextInt(6) + 1;
-				dieResults.setText("You rolled a " + a);
+				dieResults.setText("Has sacado un " + a);
 				player += a;
 				//bd.setPlayer(player);
 				bd.setPlayer(a, currPlayer);
@@ -153,7 +153,7 @@ public class BoardScreen extends JPanel{
 				
 				for(Player p: players){
 					if(p.returnPosition() >= x*y-1){
-						success.setText("And the winner is: " + p.returnName() + "\nYour score: " + p.returnPlayerScore());
+						success.setText("Y el ganador es: " + p.returnName() + "\nTu puntuación: " + p.returnPlayerScore());
 					    roll.setVisible(false);
 					}
 				}

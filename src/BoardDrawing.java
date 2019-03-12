@@ -190,9 +190,9 @@ public class BoardDrawing extends JPanel{
 			if(bs.players.get(pnos).returnPosition() == port.returnStart()){
 				bs.players.get(pnos).setPosition(port.returnEnd());
 				if(port.returnNature() == 1)
-					message += "You are up through ladder at position " + port.returnStart();
+					message += "Subes por la escalera a la posición " + port.returnStart();
 				else if(port.returnNature() == -1)
-					message += "Snake at " + port.returnStart() + " got you.";
+					message += "Serpiente en " + port.returnStart() + " te atrapó.";
 			}
 		}
 		return message; 
