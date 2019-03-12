@@ -37,12 +37,12 @@ public class BoardScreen extends JPanel{
 	JButton quit;
 
 	public void quitButtonActionListener(){
-		if(JOptionPane.showConfirmDialog(this, "Are you sure?") == JOptionPane.OK_OPTION)
+		if(JOptionPane.showConfirmDialog(this, "¿Estás seguro?") == JOptionPane.OK_OPTION)
 	        System.exit(0);
 	}
 	
 	public void goButtonActionListener(){
-		mw.showCard("Two");
+		mw.showCard("Dos");
 		//mw.setBoard();
 		mw.resetAll();
 	}
@@ -73,8 +73,8 @@ public class BoardScreen extends JPanel{
 		
 		currPlayer = 0;
 		
-		go = new JButton("New Game");
-		quit = new JButton("Quit");	
+		go = new JButton("Nuevo Juego");
+		quit = new JButton("Salir");	
 		
 		go.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent event){

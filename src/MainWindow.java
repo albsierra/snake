@@ -30,16 +30,16 @@ public class MainWindow extends JFrame{
 		s3 = new CustomizeBoardScreen(this);
 		s4 = new BoardScreen(this);
 		
-		cards.add(s1,"One");
-		cards.add(s2,"Two");
-		cards.add(s3, "Three");
-		cards.add(s4, "Four");
+		cards.add(s1,"Uno");
+		cards.add(s2,"Dos");
+		cards.add(s3, "Tres");
+		cards.add(s4, "Cuatro");
 	}
 	
 	//maintaining board info
 	public void setBoard(){
 		s4 = new BoardScreen(this);
-		cards.add(s4, "Four");
+		cards.add(s4, "Cuatro");
 	}
 	
 	public MainWindow(){
@@ -51,7 +51,7 @@ public class MainWindow extends JFrame{
 		add(cards);
 		
 		s1 = new WelcomeScreen(this);
-		s1.setTitle("Snake and Ladders");
+		s1.setTitle("Serpientes y Escaleras");
 		
 		/*
 		JPanel jp2 = new JPanel(new FlowLayout());
@@ -84,10 +84,10 @@ public class MainWindow extends JFrame{
 		s3 = new CustomizeBoardScreen(this);
 		s4 = new BoardScreen(this);
 		
-		cards.add(s1,"One");
-		cards.add(s2,"Two");
-		cards.add(s3, "Three");
-		cards.add(s4, "Four");
+		cards.add(s1,"Uno");
+		cards.add(s2,"Dos");
+		cards.add(s3, "Tres");
+		cards.add(s4, "Cuatro");
 		
 		//cards.add(jp2,"Two");
 		//cards.add(jp4,"Four");
@@ -95,8 +95,8 @@ public class MainWindow extends JFrame{
 		
 		cl = (CardLayout)(cards.getLayout());
 		
-		cl.show(cards, "One");
-		showCard("One");	
+		cl.show(cards, "Uno");
+		showCard("Uno");	
 	}
 
 }
